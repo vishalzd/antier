@@ -45,12 +45,22 @@ class Router {
         });
     }
     
-    navigateTo(path) {
-        this.hasNavigated = true;
-        window.history.pushState({}, '', path);
-        this.handleRoute();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+ navigateTo(path) {
+    this.hasNavigated = true;
+    
+    // If navigating to home (/), redirect to the actual base URL
+    if (path === '/') {
+        // Get the base path from current location
+        const pathParts = window.location.pathname.split('/').filter(p => p);
+        const basePath = pathParts[0] ? '/' + pathParts[0] + '/' : '/';
+        window.location.href = window.location.origin + basePath;
+        return;
     }
+    
+    window.history.pushState({}, '', path);
+    this.handleRoute();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
     
     handleRoute() {
         let path = window.location.pathname;
