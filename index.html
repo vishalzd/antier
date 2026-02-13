@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+    
+    <title>Antier Solutions - Enterprise Blockchain, AI & ESG Technology Consulting</title>
+    <meta name="description" content="Leading enterprise technology consulting for Blockchain, AI, and ESG platforms. Discover 50+ blockchain solutions across 8 industries.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0F172A',
+                        secondary: '#1E40AF',
+                        accent: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav id="mainNav" class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-2xl font-bold text-primary">
+                        <span class="text-secondary">Antier</span> Solutions
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-secondary transition-colors font-medium">Home</a>
+                    
+                    <!-- Enterprise Blockchain Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-secondary transition-colors font-medium flex items-center">
+                            Enterprise Blockchain
+                            <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <!-- Mega Menu -->
+                        <div class="mega-menu absolute left-1/2 transform -translate-x-1/2 top-full mt-2 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-8" style="width: 900px; max-width: 90vw;">
+                            <div class="grid grid-cols-2 gap-6">
+                                <!-- Category 1 -->
+                                <a href="/enterprise-blockchain/supply-chain" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-boxes"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Supply Chain & Provenance</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Traceability, transparency, and lifecycle tracking</p>
+                                            <span class="text-xs text-secondary font-medium">12 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 2 -->
+                                <a href="/enterprise-blockchain/finance" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Trade Finance & Enterprise Finance</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Trade finance, reconciliation, and treasury management</p>
+                                            <span class="text-xs text-secondary font-medium">8 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 3 -->
+                                <a href="/enterprise-blockchain/identity" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-fingerprint"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Identity & Access</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Decentralized identity and access management</p>
+                                            <span class="text-xs text-secondary font-medium">6 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 4 -->
+                                <a href="/enterprise-blockchain/healthcare" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-heartbeat"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Healthcare & Life Sciences</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Patient data, pharma tracking, and clinical trials</p>
+                                            <span class="text-xs text-secondary font-medium">5 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 5 -->
+                                <a href="/enterprise-blockchain/energy-esg" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-leaf"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Energy, Carbon & ESG</h3>
+                                            <p class="text-sm text-gray-600 mb-2">REC tracking, carbon ledger, and ESG platforms</p>
+                                            <span class="text-xs text-secondary font-medium">5 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 6 -->
+                                <a href="/enterprise-blockchain/insurance" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Insurance & Risk</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Parametric insurance and fraud prevention</p>
+                                            <span class="text-xs text-secondary font-medium">4 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 7 -->
+                                <a href="/enterprise-blockchain/real-estate-legal" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Real Estate, Legal & Records</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Land registry, contracts, and digital notarization</p>
+                                            <span class="text-xs text-secondary font-medium">5 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Category 8 -->
+                                <a href="/enterprise-blockchain/telecom" class="mega-menu-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-start">
+                                        <div class="text-secondary text-2xl mr-4">
+                                            <i class="fas fa-signal"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 mb-1">Telecom & Data Sharing</h3>
+                                            <p class="text-sm text-gray-600 mb-2">Roaming, consent management, and data clean rooms</p>
+                                            <span class="text-xs text-secondary font-medium">5 Solutions →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- View All Link -->
+                            <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+                                <a href="/enterprise-blockchain" class="text-secondary font-semibold hover:text-blue-700 transition-colors">
+                                    View All 50 Blockchain Solutions →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="/ai-automation" class="text-gray-700 hover:text-secondary transition-colors font-medium">AI & Automation</a>
+                    <a href="/carbon-esg" class="text-gray-700 hover:text-secondary transition-colors font-medium">Carbon & ESG</a>
+                    <a href="/industries" class="text-gray-700 hover:text-secondary transition-colors font-medium">Industries</a>
+                    <a href="/insights" class="text-gray-700 hover:text-secondary transition-colors font-medium">Insights</a>
+                    <a href="/about" class="text-gray-700 hover:text-secondary transition-colors font-medium">About</a>
+                    <a href="/contact" class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-secondary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="/" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Home</a>
+                <a href="/enterprise-blockchain" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Enterprise Blockchain</a>
+                <a href="/ai-automation" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">AI & Automation</a>
+                <a href="/carbon-esg" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Carbon & ESG</a>
+                <a href="/industries" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Industries</a>
+                <a href="/insights" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Insights</a>
+                <a href="/about" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">About</a>
+                <a href="/contact" class="block px-3 py-2 rounded-md bg-secondary text-white hover:bg-blue-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary via-slate-800 to-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Enterprise Technology<br>
+                    <span class="text-blue-400">That Transforms Business</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Antier Solutions delivers enterprise-grade Blockchain, AI, and ESG platforms that drive digital transformation. 
+                    Trusted by global enterprises across 8 industries with 50+ proven blockchain solutions.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/enterprise-blockchain" class="bg-secondary hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        Explore Blockchain Solutions
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="/contact" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        Schedule Consultation
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Solutions Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Enterprise Technology Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We specialize in building transformative technology platforms for enterprise innovation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blockchain -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Enterprise Blockchain</h3>
+                    <p class="text-gray-700 mb-4">
+                        50+ blockchain solutions across supply chain, finance, healthcare, ESG, and more. 
+                        Permissioned networks built for enterprise scale.
+                    </p>
+                    <a href="/enterprise-blockchain" class="text-secondary font-semibold hover:text-blue-700 inline-flex items-center">
+                        Explore Solutions
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- AI -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">AI & Automation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Intelligent automation, predictive analytics, and machine learning solutions 
+                        that optimize operations and drive insights.
+                    </p>
+                    <a href="/ai-automation" class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- ESG -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Carbon & ESG Platforms</h3>
+                    <p class="text-gray-700 mb-4">
+                        Track, measure, and report carbon emissions. Build transparent ESG frameworks 
+                        with blockchain-verified sustainability data.
+                    </p>
+                    <a href="/carbon-esg" class="text-green-600 font-semibold hover:text-green-700 inline-flex items-center">
+                        View Platforms
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industry Focus -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Delivering specialized solutions for global enterprises across diverse sectors
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-boxes text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Supply Chain</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-university text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Financial Services</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-heartbeat text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Healthcare</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-bolt text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Energy & Utilities</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-shield-alt text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Insurance</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-building text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Real Estate</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-signal text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Telecom</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <i class="fas fa-industry text-3xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Manufacturing</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Enterprise?</h2>
+            <p class="text-xl mb-8 text-blue-100">
+                Speak with our technology consultants to discover how blockchain, AI, and ESG platforms 
+                can drive innovation in your organization.
+            </p>
+            <a href="/contact" class="bg-white text-secondary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
+                Schedule a Consultation
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-xl mb-4">Antier Solutions</h3>
+                    <p class="text-sm">
+                        Enterprise technology consulting for digital transformation through Blockchain, AI, and ESG platforms.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/enterprise-blockchain" class="hover:text-white transition-colors">Enterprise Blockchain</a></li>
+                        <li><a href="/ai-automation" class="hover:text-white transition-colors">AI & Automation</a></li>
+                        <li><a href="/carbon-esg" class="hover:text-white transition-colors">Carbon & ESG</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/industries" class="hover:text-white transition-colors">Industries</a></li>
+                        <li><a href="/insights" class="hover:text-white transition-colors">Insights</a></li>
+                        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-sm text-center">
+                <p>&copy; 2026 Antier Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/router.js"></script>
+</body>
+</html>
